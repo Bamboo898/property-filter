@@ -28,3 +28,9 @@ PropertyUtils.getProperty(user, "status|dynDesc:'common.user.status'", applicati
 
 ## 内置过滤器
 ### dynDesc
+- 作用: 国际化处理类。主要用于通过拼接资源key来从国际化资源中拿取值。
+- 用法: orderStatus | dynDesc:'common.orderstatus':'zh_CN'
+- 参数1: 国际化资源的Key，必填
+- 参数2: 地区标识，选填，默认为zh_CN
+
+### 
