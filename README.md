@@ -25,6 +25,7 @@ PropertyUtils.getProperty(user, "mobileNumber|mask:'3':'4'");
 PropertyUtils.getProperty(user, "status|dynDesc:'common.user.status'", applicationContext);
 ```
 > *NOTE:* dynDesc过滤器需要传入Spring的ApplicationContext实例
+> *NOTE:* 可多个过滤器同事
 
 ## 内置过滤器
 ### dynDesc
