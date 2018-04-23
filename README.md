@@ -28,9 +28,29 @@ PropertyUtils.getProperty(user, "status|dynDesc:'common.user.status'", applicati
 
 ## 内置过滤器
 ### dynDesc
-- 作用: 国际化处理类。主要用于通过拼接资源key来从国际化资源中拿取值。
+- 作用: 主要用于通过拼接资源key来从国际化资源中拿取值。
 - 用法: orderStatus | dynDesc:'common.orderstatus':'zh_CN'
 - 参数1: 国际化资源的Key，必填
 - 参数2: 地区标识，选填，默认为zh_CN
 
-### 
+### dateFormat
+- 作用: 用于将日期对象格式化
+- 用法: birthDay | dateFormat:'yyyy-MM-dd' 结果: 1991-01-13
+- 参数1: 日期的目标格式, 必填
+- 参数2: 地区标识, 选填
+
+### mask
+- 作用: 用于将字符串部分文字转换成 ***
+- 用法: mobileNumber | mask:'3':'4' 结果: 134***4059
+- 参数1: *号前面字符长度, 必填
+- 参数2: *号后面字符长度, 必填
+
+### coll2Str
+- 作用: 用于将一个collection中的对象的某个属性值提取出来，并转换成以 "," 分隔的字符串
+- 用法: users | coll2Str:'userName' 结果: 李四, 王五, 赵六
+- 参数1: 要提取的属性名, 必填
+
+### defaultVal
+- 作用: 用于在传入值为null时返回一个特定的值
+- 用法: amount | defaultVal:'0.0' 结果: 0.0
+- 参数1: 默认值, 必填
