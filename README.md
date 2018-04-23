@@ -25,7 +25,8 @@ PropertyUtils.getProperty(user, "mobileNumber|mask:'3':'4'");
 PropertyUtils.getProperty(user, "status|dynDesc:'common.user.status'", applicationContext);
 ```
 > *NOTE:* dynDesc过滤器需要传入Spring的ApplicationContext实例
-> *NOTE:* 可多个过滤器同事
+
+> *Tips:* 可多个过滤器同时使用: mobileNumber | defaultVal:'该未输入手机号' | mask:'3':'4' 结果: 134***4059
 
 ## 内置过滤器
 ### dynDesc
