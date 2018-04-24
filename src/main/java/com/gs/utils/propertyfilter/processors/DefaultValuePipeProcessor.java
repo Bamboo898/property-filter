@@ -2,11 +2,13 @@ package com.gs.utils.propertyfilter.processors;
 
 /**
  *
- * 默认值处理类。用于在传入值为null时返回一个特定的值
- *
- * 用法: amount | defaultVal:'0.0' 结果: 0.0
- *
- * 参数1: 默认值
+ * 默认值处理类。用于在传入值为null时返回一个特定的值<br />
+ *<br />
+ * 用法: amount | defaultVal:'0.0' 结果: 0.0<br />
+ *<br />
+ * 参数1: 默认值<br />
+ * @since 1.0
+ * @author leitao
  *
  */
 

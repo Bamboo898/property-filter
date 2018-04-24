@@ -4,12 +4,14 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  *
- * 马赛克处理类。 用于将字符串部分文字转换成 ***
- *
- * 用法: mobileNumber | mask:'3':'4' 结果: 134***4059
- *
- * 参数1: *号前面字符长度
- * 参数2: *号后面字符长度
+ * 马赛克处理类。 用于将字符串部分文字转换成 ***<br />
+ *<br />
+ * 用法: mobileNumber | mask:'3':'4' 结果: 134***4059<br />
+ *<br />
+ * 参数1: *号前面字符长度<br />
+ * 参数2: *号后面字符长度<br />
+ * @since 1.0
+ * @author leitao
  *
  */
 

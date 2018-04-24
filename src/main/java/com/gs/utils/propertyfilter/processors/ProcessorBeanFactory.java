@@ -13,11 +13,14 @@ import java.util.Set;
 /**
  * 此类通过扫描带有<code>@Processor</code>的类
  * 来构造一个key为processor name，value为
- * spring bean name的map，再通过getPipeProcessor
- * 方法从spring容器中找到对应的处理类。
+ * 处理器Class的map，再通过getPipeProcessor
+ * 方法从map中找到对应的处理器，若未发现对应的处理
+ * 器Class则抛出异常，若找到则根据是否有
+ * <code>@Componet</code>注解来决定是new一个实
+ * 例还是从Spring容器中拿取实例。
  *
+ * @since 1.0
  * @author leitao
- * date: 2018-03-20
  *
  */
 public class ProcessorBeanFactory {
@@ -40,9 +43,9 @@ public class ProcessorBeanFactory {
      * 根据参数 name 从IOC容器中拿PipeProcessor
      * 或直接创建一个对象
      *
-     * @param name
-     * @param applicationContext
-     * @return PipeProcessor
+     * @param name  过滤器名称
+     * @param applicationContext Spring的ApplicationContext实例
+     * @return PipeProcessor    过滤器处理器
      * @throws PipeProcessException
      */
     public PipeProcessor getPipeProcessor(String name, ApplicationContext applicationContext) throws PipeProcessException {

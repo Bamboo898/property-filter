@@ -14,7 +14,10 @@ import org.springframework.context.ApplicationContext;
 
 /**
  *
- * 方法getProperty为主入口
+ * getProperty为主入口
+ *
+ * @since 1.0
+ * @author leitao
  *
  */
 public class PropertyUtils {

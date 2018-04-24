@@ -8,6 +8,9 @@ import java.lang.annotation.Target;
 
 /**
  * 该注解类用于标识过滤器类
+ *
+ * @since 1.0
+ * @author leitao
  */
 
 @Retention(RUNTIME)

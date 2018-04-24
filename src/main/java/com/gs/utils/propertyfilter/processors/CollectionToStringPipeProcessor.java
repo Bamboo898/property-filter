@@ -7,11 +7,14 @@ import org.apache.commons.beanutils.PropertyUtils;
 
 /**
  *
- * Collection转换成字符串的处理类。用于将一个collection中的对象的某个属性值提取出来，并转换成以 "," 分隔的字符串
- *
- * 用法: users | coll2Str:'userName' 结果: 李四, 王五, 赵六
- *
- * 参数1: 要提取的属性名
+ * Collection转换成字符串的处理类。用于将一个collection中的对象的某个属性值提取出来，并转换成以 "," 分隔的字符串。<br />
+ *<br />
+ * 用法: users | coll2Str:'userName' 结果: 李四, 王五, 赵六<br />
+ *<br />
+ * 参数1: 要提取的属性名<br />
+ *<br />
+ * @since 1.0
+ * @author leitao
  *
  */
 

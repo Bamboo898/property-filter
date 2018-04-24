@@ -10,13 +10,15 @@ import org.springframework.stereotype.Component;
 
 /**
  *
- * 国际化处理类。主要用于通过拼接资源key来从国际化资源中拿取值。
- * 该处理类需依赖Spring使用。
- *
- * 用法: orderStatus | dynDesc:'common.orderstatus':'zh_CN' 结果: 已完成
- *
- * 参数1: 国际化资源的Key
- * 参数2: 地区标识
+ * 国际化处理类。主要用于通过拼接资源key来从国际化资源中拿取值。<br />
+ * 该处理类需依赖Spring使用。<br />
+ *<br />
+ * 用法: orderStatus | dynDesc:'common.orderstatus':'zh_CN' 结果: 已完成<br />
+ *<br />
+ * 参数1: 国际化资源的Key<br />
+ * 参数2: 地区标识<br />
+ * @since 1.0
+ * @author leitao
  *
  */
 
