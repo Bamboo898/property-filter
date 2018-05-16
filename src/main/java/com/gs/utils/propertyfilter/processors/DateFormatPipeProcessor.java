@@ -22,15 +22,18 @@ import org.apache.commons.lang.LocaleUtils;
 public class DateFormatPipeProcessor implements PipeProcessor {
 
 	public Object process(Object input, String... params) throws PipeProcessException {
-		
-		if (input == null) return null;
-		
+
 		SimpleDateFormat format = new SimpleDateFormat(params[0].trim());
 		if (params.length > 1) {
 			format = new SimpleDateFormat(params[0].trim(), LocaleUtils.toLocale(params[1].trim()));
 		}
 		
 		return format.format((Date) input);
+	}
+
+	@Override
+	public boolean valueSupported(Object input) {
+		return input instanceof Date;
 	}
 
 }

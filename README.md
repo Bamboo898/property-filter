@@ -12,7 +12,7 @@ mvn clean install -Dmaven.test.skip=true
 <dependency>
 	<groupId>com.gs.utils</groupId> 
 	<artifactId>property-filter</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 </dependency>
 ```
 
@@ -55,6 +55,12 @@ PropertyUtils.getProperty(user, "status|dynDesc:'common.user.status'", applicati
 - 作用: 用于将一个collection中的对象的某个属性值提取出来，并转换成以 `,` 分隔的字符串
 - 用法: `users | coll2Str:'userName'` 结果: 李四, 王五, 赵六
 - 参数1: 要提取的属性名, 必填
+
+### `collSort`
+- 作用: 对collection进行指定字段的排序, 支持多属性排序。将返回ArrayList。
+- 用法: `users | collSort:'userName':'age.desc'`
+- 参数1: 要排序的第一个属性(默认使用字典顺序排序)
+- 参数2: 要排序的第二个属性名及排序方式
 
 ### `defaultVal`
 - 作用: 用于在传入值为null时返回一个特定的值

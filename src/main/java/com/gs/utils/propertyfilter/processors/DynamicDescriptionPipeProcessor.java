@@ -29,13 +29,16 @@ public class DynamicDescriptionPipeProcessor implements PipeProcessor, Applicati
 	private ApplicationContext applicationContext;
 	
 	public Object process(Object input, String... params) throws PipeProcessException {
-		
-		if (input == null) return null;
-		
+
 		String code = params.length > 0 ? params[0].trim() + "." + input.toString() : input.toString();
 		Locale locale = params.length > 1 ? LocaleUtils.toLocale(params[1].trim()) : Locale.SIMPLIFIED_CHINESE;
 		
 		return applicationContext.getMessage(code, null, locale);
+	}
+
+	@Override
+	public boolean valueSupported(Object input) {
+		return input instanceof String;
 	}
 
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

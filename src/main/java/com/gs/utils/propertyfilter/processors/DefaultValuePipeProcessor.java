@@ -19,4 +19,9 @@ public class DefaultValuePipeProcessor implements PipeProcessor {
 		return input == null ? params[0] : input;
 	}
 
+	@Override
+	public boolean valueSupported(Object input) {
+		return true;
+	}
+
 }

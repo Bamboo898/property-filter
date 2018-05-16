@@ -19,9 +19,7 @@ import org.apache.commons.lang.StringUtils;
 public class MaskPipeProcessor implements PipeProcessor {
 
 	public Object process(Object input, String... params) throws PipeProcessException {
-		
-		if (input == null || StringUtils.isBlank(input.toString())) return input;
-		
+
 		int preLength = Integer.valueOf(params[0]);
 		int suffixLength = Integer.valueOf(params[1]);
 		
@@ -32,6 +30,11 @@ public class MaskPipeProcessor implements PipeProcessor {
 		value += StringUtils.substring(input.toString(), input.toString().length() - suffixLength, input.toString().length());
 		
 		return value;
+	}
+
+	@Override
+	public boolean valueSupported(Object input) {
+		return input instanceof String && !StringUtils.isBlank(input.toString());
 	}
 
 }

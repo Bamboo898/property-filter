@@ -69,7 +69,7 @@ public class PropertyUtils {
 			params.add(matcher.group(0).replaceAll("\'", ""));
 		}
 
-		return pipeProcessor.process(input, params.toArray(new String[]{}));
+		return pipeProcessor.valueSupported(input) ? pipeProcessor.process(input, params.toArray(new String[]{})) : input;
 
 	}
 

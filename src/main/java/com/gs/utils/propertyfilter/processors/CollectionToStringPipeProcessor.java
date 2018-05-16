@@ -2,6 +2,7 @@ package com.gs.utils.propertyfilter.processors;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.apache.commons.beanutils.PropertyUtils;
 
@@ -22,30 +23,30 @@ import org.apache.commons.beanutils.PropertyUtils;
 public class CollectionToStringPipeProcessor implements PipeProcessor {
 
 	public Object process(Object input, String... params) throws PipeProcessException {
-		
-		if (!(input instanceof Collection)) {
-			return input;
-		}
-		
+
 		try {
 			Collection collection = (Collection) input;
 			
 			String field = params[0];
 			
-			StringBuffer val = new StringBuffer();
+			List<String> values = new ArrayList();
 			
 			Iterator iterator = collection.iterator();
 			while (iterator.hasNext()) {
-				val.append(PropertyUtils.getProperty(iterator.next(), field));
-				if (iterator.hasNext()) {
-					val.append(", ");
-				}
+			    Object o = PropertyUtils.getProperty(iterator.next(), field);
+			    if (o != null)
+                    values.add(o.toString());
 			}
 			
-			return val.toString();
+			return values.stream().collect(Collectors.joining(", "));
 		} catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
 			e.printStackTrace();
 			throw new PipeProcessException(e.getMessage(), e);
 		}
 	}
+
+    @Override
+    public boolean valueSupported(Object input) {
+        return input instanceof Collection;
+    }
 }
