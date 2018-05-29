@@ -1,5 +1,7 @@
 package com.gs.utils.propertyfilter.processors;
 
+import com.gs.utils.propertyfilter.processors.Exceptions.PipeProcessException;
+
 /**
  *
  * 默认值处理类。用于在传入值为null时返回一个特定的值<br />

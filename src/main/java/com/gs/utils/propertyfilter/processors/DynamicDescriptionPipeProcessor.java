@@ -2,6 +2,7 @@ package com.gs.utils.propertyfilter.processors;
 
 import java.util.Locale;
 
+import com.gs.utils.propertyfilter.processors.Exceptions.PipeProcessException;
 import org.apache.commons.lang.LocaleUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

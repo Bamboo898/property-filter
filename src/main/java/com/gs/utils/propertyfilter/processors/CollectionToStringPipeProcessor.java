@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import com.gs.utils.propertyfilter.processors.Exceptions.PipeProcessException;
 import org.apache.commons.beanutils.PropertyUtils;
 
 /**

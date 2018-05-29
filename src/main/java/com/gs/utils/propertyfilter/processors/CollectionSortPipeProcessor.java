@@ -1,6 +1,6 @@
 package com.gs.utils.propertyfilter.processors;
 
-import com.google.common.collect.Lists;
+import com.gs.utils.propertyfilter.processors.Exceptions.PipeProcessException;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang.StringUtils;
 

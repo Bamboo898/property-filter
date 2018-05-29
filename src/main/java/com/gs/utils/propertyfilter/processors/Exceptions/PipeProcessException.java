@@ -1,4 +1,4 @@
-package com.gs.utils.propertyfilter.processors;
+package com.gs.utils.propertyfilter.processors.Exceptions;
 
 public class PipeProcessException extends Exception {
 
