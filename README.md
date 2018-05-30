@@ -1,6 +1,6 @@
 # Property Filter
 通过简单的表达式，从对象中拿到需要转化的属性值并对其进行一系列的转化处理，最终得到你想要的文字或对象。
-
+用途：可用来在动态生成Excel时定义每列的值，也可用来在发送短信、邮件、微信消息时定义里面需要动态替换的部分。
 ## 安装
 ```shell
 git clone https://github.com/Bamboo898/property-filter.git
